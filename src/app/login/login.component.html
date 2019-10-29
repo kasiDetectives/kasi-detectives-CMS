@@ -1,0 +1,14 @@
+
+<div style='border: 1px solid rgb(6, 18, 194); height: 100%'>
+		<mat-card>
+				<form [formGroup]='loginForm'>
+					<mat-form-field>
+						<input matInput placeholder='Email' formControlName='email'>		
+					</mat-form-field><br>
+					<mat-form-field>
+						<input matInput placeholder='Password' formControlName='password'>		
+					</mat-form-field><br>
+					<button mat-raised-button color="primary" [disabled]='!loginForm.valid' (click)='login()'>Submit</button>
+				</form>
+			</mat-card>
+</div>
