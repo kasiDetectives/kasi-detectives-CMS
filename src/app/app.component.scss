@@ -1,0 +1,30 @@
+.headerwrapper {
+	background-color: #204969;
+	min-height: 60px;
+	width: 100%;
+	z-index: 1000;
+	&:after {
+	    clear: both;
+	    display: block;
+	    content: '';
+	}
+    }
+    .header-left {
+	float: left;
+	
+	#header-text {
+		color: rgb(255, 255, 255);
+		margin-left: 10px;
+		font-weight: 500;
+	}
+    }
+    
+    .header-right {
+	float: right;
+    }
+    
+    a.btn.btn-social-icon.btn-github {
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 10px;
+    }

@@ -1,50 +1,59 @@
-
-
-<!-- <mat-drawer-container class="example-container">
-	<mat-drawer mode="side" opened>Drawer content</mat-drawer>
-	<mat-drawer-content>Main content</mat-drawer-content>
-      </mat-drawer-container> -->
-      <!-- <div style='position: relative; top: 0; height: 100%; width: 200px; display: inline-block; background-color: rgb(2, 88, 168);' (onLoad)="sidenav.open()">
-	
-	<mat-list>
-		<mat-list-item>Kasi Detectives</mat-list-item>
-	</mat-list>
-	<mat-divider></mat-divider>
-    
-    <mat-list role="list">
-	<mat-list-item role="listitem" tappable>Item 1</mat-list-item>
-	<mat-list-item role="listitem">Item 2</mat-list-item>
-	<mat-list-item role="listitem">Item 3</mat-list-item>
-      </mat-list>
-
-
-      </div> -->
-      <!-- -->
-      <div style='border: 1px solid rgb(0,0,0); width: 20%; display: block; float: left'>
-	<mat-list>
-		<mat-list-item>
-			one
-		</mat-list-item>
-	</mat-list>
-      </div>
-      <div style='border: 1px solid rgb(0,0,0); width: 60%; display: block; float:left;'>
-		<mat-button-toggle-group style="margin-bottom: 5px;">
+<header>
+	<div class="headerwrapper">
+	    <div class="header-left">
+		    
+		<h2 id='header-text'>Kasi Detectives</h2>
+	    </div>
+	    <div class="header-right">
 		
-				<mat-button-toggle routerLink="users" value="left" aria-label="Text align left">
-					Users
-				       </mat-button-toggle>
-				       <mat-button-toggle routerLink="users" value="left" aria-label="Text align left">
-					Users
-				       </mat-button-toggle>
-				       <mat-button-toggle routerLink="users" value="left" aria-label="Text align left">
-					Users
-				       </mat-button-toggle>
-			      
-			      </mat-button-toggle-group>
-			      <mat-divider></mat-divider>
-      </div>
-       
+	    </div><!-- header-right -->
+	</div><!-- headerwrapper -->
+    </header>
 
-
-      
+    <!-- Side menu -->
+    <div class="sidebar hidden-sm-down">
+		<ul class="nav in" id="side-menu">
+		    <li class="sidebar-search hidden-sm hidden-md hidden-lg">
+			<!-- input-group -->
+			<div class="input-group custom-search-form">
+			    <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+			<button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
+			</span></div>
+			<!-- /input-group -->
+		    </li>
+		    <li class="user-pro">
+			<a href="#" class="text-center">
+			    <div class="profile-img">
+				<img src="assets/images/profile.jpg"/>
+			    </div>
+			    <span>Steve Gection</span>
+			    <small class="text-center">Senior Developer</small>
+			</a>
+		    </li>
+		    <li><a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" class="waves-effect"><i class="fa fa-home"></i> <span
+			    class="hide-menu">Dashboard</span></a></li>
+		    <!-- <li class=""><a href="javascript:void(0);" class="waves-effect"><i class="fa fa-envelope-o"></i> <span
+			    class="hide-menu"> Mailbox <span class="fa arrow"></span><span
+			    class="label label-rouded label-danger pull-right">6</span></span></a>
+		    </li> -->
+		    <li>
+			<a [routerLink]="['/ui-elements']" [routerLinkActive]="['active']">
+			    <i class="fa fa-edit"></i>
+			    <span class="hide-menu">UI Elements</span>
+			</a>
+		    </li>
+		    <li>
+			<a  [routerLink]="['/forms']" [routerLinkActive]="['active']">
+			    <i class="fa fa-edit"></i>
+			    <span class="hide-menu">Form</span>
+			</a>
+		    </li>
+		    <li>
+			<a  [routerLink]="['/tables']" [routerLinkActive]="['active']">
+			    <i class="fa fa-bars"></i>
+			    <span class="hide-menu">Tables</span>
+			</a>
+		    </li>
+		</ul>
+	    </div>
 <router-outlet></router-outlet>

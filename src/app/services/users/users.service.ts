@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase'
-
-//var database = firebase.database();
 @Injectable({
   providedIn: 'root'
 })
